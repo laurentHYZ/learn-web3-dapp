@@ -1,8 +1,6 @@
 # 🧩 API keys
 
-Note: **DataHub does not provide access to or support for Secret**.
-
-If you wish to make use of the Pathway content using another private infrastructure provider (such as Alchemy), you will need a valid API key and an endpoint URL to access Secret.
+If you wish to make use of the Pathway content using a private infrastructure provider, you will likely need a valid API key and an endpoint URL to access Secret.
 
 To use an API key, you should copy the contents of the `.env.example` file located in the project root directory (`/learn-web3-dapp/.env.example`) into a new file named `.env.local` (`/learn-web3-dapp/.env.local`). Also, since this file will contain your API key, we have already added it to the `.gitignore`.
 
@@ -21,10 +19,11 @@ DATAHUB_POLKADOT_API_KEY=
 DATAHUB_POLYGON_API_KEY=
 SECRET_API_KEY=dd2c0d53e7c7de0843e23dd30bf4fcc5
 DATAHUB_SOLANA_API_KEY=
-DATAHUB_TEZOS_API_KEY=
 ```
 
-When connecting to Secret, this pathway defaults to using a helper function which returns the Light Client Daemon (LCD) endpoint URL. The file containing the `getNodeUrl` helper function is located at `components/protocols/secret/lib/index.ts`. Within the API routes in `pages/api/secret`, you can always pass an endpoint URL to the `CosmWasmClient` directly, for example:
+When connecting to Secret, this pathway defaults to using a helper function which returns the Light Client Daemon (LCD) endpoint URL for the `pulsar-2` testnet. The file containing the `getNodeUrl` helper function is located at `components/protocols/secret/lib/index.ts`.
+
+Note that you can always pass an endpoint URL when instantiating the `CosmWasmClient`, for example:
 
 ```typescript
 const client = new CosmWasmClient('http://testnet.securesecrets.org:1317/');
