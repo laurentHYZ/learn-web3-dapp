@@ -1,3 +1,21 @@
+
+
+The best way to go through those courses is using Gitpod. Gitpod provides prebuilt developer environments in your browser, powered by VS Code. Just sign in using GitHub and you'll be up and running in seconds without having to do any manual setup fire
+
+# Open this repo on Gitpod
+# Clone locally
+
+Make sure you have installed git, Node.js (Please install v14.17.0, we recommend using nvm) and yarn.
+Then clone the repo, install dependencies and start the server by running all these commands:
+
+git clone git@github.com:laurentHYZ/learn-web3-dapp.git
+cd learn-web3-dapp
+yarn
+yarn dev
+
+
+
+
 # 👋🏼 What is `learn-web3-dapp`?
 
 We made this decentralized application (dApp) to help developers learn about Web 3 protocols.
