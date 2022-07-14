@@ -1,7 +1,8 @@
 tasks:
   - init: yarn
-    command: yarn dev
-
+    command: |
+      yarn dev
+      ls -als
 ports:
   - port: 3000
     onOpen: open-preview
